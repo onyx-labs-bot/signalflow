@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .gradient-text-cyan { @apply bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-400; }
+}
+::selection { background: rgba(34, 211, 238, 0.3); }
