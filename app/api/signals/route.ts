@@ -28,7 +28,7 @@ async function getCryptoPrices(): Promise<Record<string, number>> {
 }
 
 // Simple momentum signal generator based on 24h change
-function generateCryptoSignals(prices: Record<string, any>): Signal[] {
+function generateCryptoSignals(prices: Record<string, Record<string, number>>): Signal[] {
   const signals: Signal[] = [];
   const coins: Record<string, { id: string; symbol: string }> = {
     bitcoin: { id: "btc", symbol: "BTC/USD" },
