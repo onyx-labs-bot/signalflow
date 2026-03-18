@@ -15,7 +15,8 @@ interface Signal {
 }
 
 // Fetch live crypto prices from CoinGecko (free, no API key)
-async function getCryptoPrices(): Promise<Record<string, number>> {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+async function getCryptoPrices(): Promise<Record<string, any>> {
   try {
     const res = await fetch(
       "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,solana&vs_currencies=usd&include_24hr_change=true",
@@ -28,7 +29,8 @@ async function getCryptoPrices(): Promise<Record<string, number>> {
 }
 
 // Simple momentum signal generator based on 24h change
-function generateCryptoSignals(prices: Record<string, Record<string, number>>): Signal[] {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function generateCryptoSignals(prices: Record<string, any>): Signal[] {
   const signals: Signal[] = [];
   const coins: Record<string, { id: string; symbol: string }> = {
     bitcoin: { id: "btc", symbol: "BTC/USD" },
