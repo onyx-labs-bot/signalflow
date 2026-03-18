@@ -17,7 +17,7 @@ const features = [
 
 const tiers = [
   { name: "Free", price: "$0", period: "/forever", features: ["3 signals per day", "Delayed 15 min", "Crypto only", "Email delivery"], cta: "Start Free", primary: false },
-  { name: "Pro", price: "$29", period: "/month", features: ["Unlimited signals", "Real-time", "All markets", "Discord + Telegram", "Backtested strategies", "Priority support"], cta: "Join Waitlist", primary: true },
+  { name: "Pro", price: "$14", period: "/month", features: ["Unlimited signals", "Real-time", "All markets", "Discord + Telegram", "Backtested strategies", "Priority support"], cta: "Join Waitlist", primary: true },
 ];
 
 const faqs = [
@@ -203,3 +203,4 @@ export default function Home() {
     </main>
   );
 }
+
